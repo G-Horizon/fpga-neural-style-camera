@@ -1,0 +1,201 @@
+{
+  "name": "01R2_mid_plate",
+  "units": "mm",
+  "thickness_mm": 2.7,
+  "holes": [
+    [
+      13,
+      13,
+      2.2
+    ],
+    [
+      13,
+      48.814,
+      2.2
+    ],
+    [
+      106.98,
+      13,
+      2.2
+    ],
+    [
+      106.98,
+      87,
+      2.2
+    ],
+    [
+      18.5,
+      83,
+      3.1
+    ],
+    [
+      48.5,
+      83,
+      3.1
+    ],
+    [
+      5,
+      5,
+      2.4
+    ],
+    [
+      5,
+      95,
+      2.4
+    ],
+    [
+      115,
+      95,
+      2.4
+    ],
+    [
+      115,
+      15,
+      2.4
+    ],
+    [
+      5,
+      60,
+      2.4
+    ]
+  ],
+  "rounded_rectangle_cuts": [
+    [
+      105,
+      6,
+      26.4,
+      3.0,
+      0
+    ]
+  ],
+  "outline_vertices_xyb_mm": [],
+  "external_size_mm": [
+    120,
+    100
+  ],
+  "corner_radius_mm": 4,
+  "R2_revision_reason": "Camera now sits between FPGA middle and S3 upper layers. Keep the lower camera tongue slot in01, remove the obsolete rear FPC through-window because the FPC remains in the same upper stage.",
+  "lower_frame_centers_mm": [
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      95
+    ],
+    [
+      115,
+      95
+    ],
+    [
+      115,
+      15
+    ]
+  ],
+  "upper_frame_centers_mm": [
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      60
+    ],
+    [
+      115,
+      95
+    ],
+    [
+      115,
+      15
+    ]
+  ],
+  "geometry_validation": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 32006.192456360834,
+    "bounds_mm": [
+      -1.7763568394002505e-15,
+      -2.6645352591003757e-15,
+      0.0,
+      120.0,
+      100.0,
+      2.7
+    ],
+    "step_readback_valid": true
+  },
+  "dxf_geometry": {
+    "closed_outer_contours": 1,
+    "circular_holes": 11,
+    "closed_inner_profiles": 1,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "outer_points_xyb_mm": [
+      [
+        116.0,
+        -1.3322676295501878e-15,
+        0.0
+      ],
+      [
+        4.0,
+        0.0,
+        -0.41421356237309503
+      ],
+      [
+        0.0,
+        4.0,
+        0.0
+      ],
+      [
+        -8.881784197001252e-16,
+        96.0,
+        -0.41421356237309326
+      ],
+      [
+        4.0,
+        100.0,
+        0.0
+      ],
+      [
+        116.0,
+        100.0,
+        -0.4142135623730929
+      ],
+      [
+        120.0,
+        96.0,
+        0.0
+      ],
+      [
+        120.0,
+        4.0,
+        -0.4142135623730933
+      ]
+    ],
+    "inner_points_xyb_mm": [
+      [
+        [
+          118.2,
+          4.5,
+          0.0
+        ],
+        [
+          118.2,
+          7.5,
+          0.0
+        ],
+        [
+          91.8,
+          7.5,
+          0.0
+        ],
+        [
+          91.8,
+          4.5,
+          0.0
+        ]
+      ]
+    ]
+  }
+}

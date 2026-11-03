@@ -1,0 +1,167 @@
+<efx:project xmlns:efx="http://www.efinixinc.com/enf_proj" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="final_camera_style" description="Three-style half-guide1080p, paired comparison, FPS, voice/wave and ESP32-S3 preview" last_change="1790880673" sw_version="2026.1.132.4.5" last_run_state="" last_run_flow="" config_result_in_sync="sync" design_ood="sync" place_ood="sync" route_ood="sync" xsi:schemaLocation="http://www.efinixinc.com/enf_proj enf_proj.xsd">
+    <efx:device_info>
+        <efx:family name="Titanium" />
+        <efx:device name="Ti60F225" />
+        <efx:timing_model name="I3" />
+    </efx:device_info>
+    <efx:design_info def_veri_version="verilog_2k" def_vhdl_version="vhdl_2008" unified_flow="false">
+        <efx:top_module name="final_camera_style_top" />
+        <efx:design_file name="../../control/d64_acc25_bridge.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_axi_reset_ctl.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_burst_prefetch.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_c2_diag.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_c2_rom.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_chunk_crc_rom.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_conv_engine.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_decoder_wreader.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_down_engine.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_encoder.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_encoder_ddr.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_encoder_ddr_mem.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_encoder_trunk.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_h0_block.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_head_ctrl.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_head_top.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_head_window.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_mac128.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_mac128_compat.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_mac128_compat_map.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_net_addr.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_pe_owner.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_requant_lane.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_residual_add.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_stage_chunk_crc.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_store_rd_mux.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_tail_engine.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_tconv_engine.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_tconv_mac.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_tconv_scheduler.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_trunk_blocks.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_trunk_scheduler.v" version="default" library="default" />
+        <efx:design_file name="../../control/d64_x16_ring.v" version="default" library="default" />
+        <efx:design_file name="../../control/generated/d64_crc32_128.v" version="default" library="default" />
+        <efx:design_file name="../../control/generated/d64_down_cfg_rom.v" version="default" library="default" />
+        <efx:design_file name="../../control/generated/d64_front_profile_rom.v" version="default" library="default" />
+        <efx:design_file name="../../control/generated/d64_trunk_cfg_rom.v" version="default" library="default" />
+        <efx:design_file name="../../memory/conv2_channel_buffer.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_async_fifo.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_bit_sync.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_descriptor_dst.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_descriptor_src.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_gray_dst.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_gray_src.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_cdc_toggle_sync.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_down_row_ring.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_line_buffer.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_reset_sync.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_tc_ram.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_trunk_row_buf.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_trunk_store.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_weight_store.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_weight_store_dp.v" version="default" library="default" />
+        <efx:design_file name="../../memory/feature_buffer.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/bench_telemetry.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_camera_frame_store.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_ddr_clk25_release.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_flash_asset_boot.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_fps_status.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_gpio_style_keys.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_result_crc32.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_status_uart.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_ui_keys.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/uart_tx.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/style/d64_style_ddr_reader.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/style/d64_style_loader.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/style/d64_style_profile_manifest.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/style/d64_style_switch.v" version="default" library="default" />
+        <efx:design_file name="d64_axi_arb2.v" version="default" library="default" />
+        <efx:design_file name="d64_axi_read_burst.v" version="default" library="default" />
+        <efx:design_file name="d64_done_tracker.v" version="default" library="default" />
+        <efx:design_file name="d64_efx_ddr_axi_bridge.v" version="default" library="default" />
+        <efx:design_file name="d64_final_system.v" version="default" library="default" />
+        <efx:design_file name="d64_network_core.v" version="default" library="default" />
+        <efx:design_file name="d64_rgbx_beat_writer.v" version="default" library="default" />
+        <efx:design_file name="d64_tail_output_chain.v" version="default" library="default" />
+        <efx:design_file name="d64_trunk_row_ddr.v" version="default" library="default" />
+        <efx:design_file name="d64_ups_u16_writer.v" version="default" library="default" />
+        <efx:design_file name="final_camera_style_top.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_crc32_64.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_csi_obs.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_frame_valid.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_i2c_master.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_raw_monitor.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_sc431hai_regs.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/cam_selftest_tx.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/d64_camera_frontend_517.v" version="default" library="default" />
+        <efx:design_file name="../cam/rtl/d64_csi2_raw_to_contract_a.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/color_bar_rgb.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_fps_overlay.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_native_display_chain.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_rgbx_display_adapter.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_video_row_ddr.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_video_scaler.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_video_test_src.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_video_timing.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/dvi_encoder.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/encode.v" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/reset.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_cam_rgb256_pixel_fifo.v" version="default" library="default" />
+        <efx:design_file name="../cam/ip/csi_rx_controller_515_raw10_512/csi_rx_controller.sv" version="default" library="default" />
+        <efx:design_file name="../../ip/DDR3IPCORE/DDR3IPCORE.sv" version="default" library="default" />
+        <efx:design_file name="../hdmi_tx/rtl/d64_bilinear_scaler.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_counter_gray_bridge.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_packed_raw_to_rgb256.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_packed_raw_camera_adapter.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_packed_raw_full_guide.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_packed_guide_to_scalar.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_raw1080_guide_store_quad.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_guide_slot_manager.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_guide_row_reader.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_guide_display_filter.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_guide_horizontal_fusion.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_guide_detail_fusion.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/d64_compact_status_uart.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_scalar_guide_edge_extend.v" version="default" library="default" />
+        <efx:design_file name="../integrate/d64_trunk_cfg_srl_bank.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_axi_join.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_comparison_display.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_comparison_pairs.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_half_preview_capture.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_interaction_extension.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_original_row_reader.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_original_store_quad.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_preview_service.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_preview_snapshot.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_spi_mailbox.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_spi_mailbox_shared_ram.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_voice_features.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_voice_matcher.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_voice_pipeline.v" version="default" library="default" />
+        <efx:design_file name="../../rtl/interaction/d64_wave_detector.v" version="default" library="default" />
+        <efx:design_file name="../../memory/d64_weight_store_abi2_mp2.v" version="default" library="default" />
+        <efx:top_vhdl_arch name="" />
+    </efx:design_info>
+    <efx:constraint_info>
+        <efx:sdc_file name="final_camera_style.sdc" />
+        <efx:inter_file name="" />
+    </efx:constraint_info>
+    <efx:sim_info />
+    <efx:misc_info />
+    <efx:ip_info />
+    <efx:synthesis tool_name="efx_map">
+        <efx:param name="work_dir" value="work_syn" value_type="e_string" />
+        <efx:param name="write_efx_verilog" value="on" value_type="e_bool" />
+        <efx:param name="mode" value="area" value_type="e_option" />
+        <efx:param name="include" value="../../board/integrate" value_type="e_string" />
+        <efx:param name="include" value="../.." value_type="e_string" />
+    </efx:synthesis>
+    <efx:place_and_route tool_name="efx_pnr">
+        <efx:param name="work_dir" value="work_pnr" value_type="e_string" />
+        <efx:param name="optimization_level" value="CONGESTION_2" value_type="e_option" />
+        <efx:param name="seed" value="4" value_type="e_integer" />
+        <efx:param name="placer_effort_level" value="3" value_type="e_option" />
+    </efx:place_and_route>
+    <efx:bitstream_generation tool_name="efx_pgm" />
+    <efx:debugger />
+    <efx:security />
+</efx:project>

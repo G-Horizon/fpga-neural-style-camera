@@ -1,0 +1,44 @@
+{
+  "abi": 3,
+  "compute_lanes": 128,
+  "weight_bits": 512,
+  "weight_tiles": 494,
+  "program_offset": "0x710000",
+  "hardware_address_base": "0x700000",
+  "retained_style_ids": [
+    1,
+    2,
+    3
+  ],
+  "required_asset_mask": "0x0e",
+  "flash_capacity": 8388608,
+  "image_bytes": 196608,
+  "sha256": "81ac318a7337735b27a63842fd9d86b3ae6677894ad5540d206fa6124f9cd85c",
+  "profiles": [
+    {
+      "style": "vangogh",
+      "style_id": 1,
+      "flash_address": "0x710000",
+      "ddr_address": "0x710000",
+      "bytes": 34864,
+      "sha256": "59bf7245af1ddb5fb4ac25f784469e4d3465f3bac763c14fdb654fed54edaf14"
+    },
+    {
+      "style": "ukiyoe",
+      "style_id": 2,
+      "flash_address": "0x720000",
+      "ddr_address": "0x720000",
+      "bytes": 34864,
+      "sha256": "42e38f86088d855a7651fb23c22d6b307db027c85dc661506001f3577fcdb936"
+    },
+    {
+      "style": "inkwash",
+      "style_id": 3,
+      "flash_address": "0x730000",
+      "ddr_address": "0x730000",
+      "bytes": 34864,
+      "sha256": "7afbd342591ccd82babaa4ea69b2b2027650b8e83b74bb1fbf8b303a842080f9"
+    }
+  ],
+  "physical_layout": "native128 low512/high512"
+}

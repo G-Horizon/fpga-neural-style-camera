@@ -1,0 +1,21 @@
+# Local environments and generated output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+outflow/
+work_syn/
+work_pnr/
+work_sim/
+build/
+build-*/
+build_*/
+.pytest_cache/
+tests/results/
+*.exe
+*.obj
+*.o
+*.log
+# Compiled firmware will be prepared separately for Releases
+*.bit

@@ -1,0 +1,27 @@
+menu "Dual Ti60 style camera"
+config STYLE_MOCK_SOURCE
+    bool "SIMULATION source (no physical SPI/UART/I2S)"
+    default n
+config STYLE_SPI_CLOCK_MHZ
+    int "B SPI clock MHz"
+    range 1 20
+    default 20
+config STYLE_AP_SSID
+    string "WiFi hotspot SSID"
+    default "Ti60-Style-Camera"
+config STYLE_AP_PASSWORD
+    string "WiFi hotspot password"
+    default "ti60style"
+config STYLE_MIC_ENABLE
+    bool "SPH0645 capture (GPIO18/17/16/15)"
+    default y
+choice STYLE_VOICE_ENGINE
+    prompt "Voice template engine (must match A FPGA)"
+    depends on STYLE_MIC_ENABLE
+    default VOICE_ON_FPGA
+config VOICE_ON_FPGA
+    bool "A FPGA via1Mbps PCM UART (default)"
+config VOICE_ON_S3
+    bool "S3 same personal-template fallback"
+endchoice
+endmenu

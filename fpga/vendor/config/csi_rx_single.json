@@ -1,0 +1,26 @@
+{
+  "ip_name": "CSI-2 RX",
+  "ip_version": "5.15",
+  "module_name": "csi_rx_controller",
+  "wrapper_parameters": {
+    "PACK_TYPE": "1",
+    "tLPX_NS": "50",
+    "tINIT_NS": "100000",
+    "tCLK_TERM_EN_NS": "38",
+    "tD_TERM_EN_NS": "25",
+    "tHS_SETTLE_NS": "85",
+    "tHS_PREPARE_ZERO_NS": "145",
+    "NUM_DATA_LANE": "4",
+    "ASYNC_STAGE": "2",
+    "HS_BYTECLK_MHZ": "70",
+    "CLOCK_FREQ_MHZ": "100",
+    "DPHY_CLOCK_MODE": "\"Discontinuous\"",
+    "PIXEL_FIFO_DEPTH": "512",
+    "AREGISTER": "8",
+    "ENABLE_USER_DESKEWCAL": "1'b0",
+    "FRAME_MODE": "\"GENERIC\"",
+    "ENABLE_VCX": "1'b0"
+  },
+  "wrapper_has_project_trace_output": false,
+  "note": "Configuration facts only. Board A additionally uses the local trace-capable receiver variant; default vendor regeneration is not promised equivalent."
+}

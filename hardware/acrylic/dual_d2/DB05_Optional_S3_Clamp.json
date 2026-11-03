@@ -1,0 +1,108 @@
+{
+  "name": "DB05_Optional_S3_Clamp",
+  "units": "mm",
+  "thickness_mm": 2.7,
+  "holes": [
+    [
+      0,
+      -20,
+      2.4
+    ],
+    [
+      0,
+      20,
+      2.4
+    ]
+  ],
+  "rounded_rectangle_cuts": [],
+  "outline_vertices_xyb_mm": [],
+  "installation": {
+    "translate_xy_mm": [
+      78,
+      60
+    ],
+    "bottom_above_upper_carrier_top_mm": 4.0,
+    "nylon_washers_each_end": 8
+  },
+  "silicone_contact_pad": {
+    "center_global_xy_mm": [
+      78,
+      69
+    ],
+    "footprint_xy_mm": [
+      3,
+      1.5
+    ],
+    "free_thickness_mm": 2.5,
+    "compressed_model_thickness_mm": 2.4,
+    "compression_mm": 0.1,
+    "reason": "Previous point78,61.3 intersects resistorR8. New point78,69 is clear of component envelopes in the existing S3 model."
+  },
+  "geometry_validation": {
+    "valid": true,
+    "solid_count": 1,
+    "bounds_mm": [
+      -2.5,
+      -23.0,
+      0.0,
+      2.5,
+      23.0,
+      2.7
+    ],
+    "volume_mm3": 587.3001761844641,
+    "step_volume_error_mm3": 2.2737367544323206e-13
+  },
+  "dxf_geometry": {
+    "closed_outer_contours": 1,
+    "circular_holes": 2,
+    "closed_inner_profiles": 0,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "outer_points_xyb_mm": [
+      [
+        0.5,
+        -23.0,
+        0.0
+      ],
+      [
+        -0.5,
+        -23.0,
+        -0.41421356237309503
+      ],
+      [
+        -2.5,
+        -21.0,
+        0.0
+      ],
+      [
+        -2.5,
+        21.0,
+        -0.41421356237309503
+      ],
+      [
+        -0.5,
+        23.0,
+        0.0
+      ],
+      [
+        0.5,
+        23.0,
+        -0.41421356237309503
+      ],
+      [
+        2.5,
+        21.0,
+        0.0
+      ],
+      [
+        2.5,
+        -21.0,
+        -0.41421356237309503
+      ]
+    ],
+    "inner_points_xyb_mm": []
+  },
+  "source_part": "05R2_s3_retainer",
+  "quantity": 1,
+  "optional": true
+}

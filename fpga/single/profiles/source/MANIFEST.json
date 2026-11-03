@@ -1,0 +1,42 @@
+[
+  {
+    "path": "profiles/source/candy/derived_contract.json",
+    "sha256": "22a9f580f2a1a6e74650672720c816ee5cbbe47e3d490ac46466c730907d8d57",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\candy\\derived_contract.json"
+  },
+  {
+    "path": "profiles/source/candy/derived_weights.npz",
+    "sha256": "819b60ce7930f33ff9e62fd5e91b75aaa2cb96922e4f72077507d8cf7605258a",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\candy\\derived_weights.npz"
+  },
+  {
+    "path": "profiles/source/vangogh/derived_contract.json",
+    "sha256": "0fd96bb15bd91ab9b0f49b550f39c961ea0ba66efe014b48007f06139915ada1",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\vangogh\\derived_contract.json"
+  },
+  {
+    "path": "profiles/source/vangogh/derived_weights.npz",
+    "sha256": "5d2c0f7561e4e9f47d3ae3ce98ee5ee463c9f3f03a65ad741d5cbd08da6c32da",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\vangogh\\derived_weights.npz"
+  },
+  {
+    "path": "profiles/source/ukiyoe/derived_contract.json",
+    "sha256": "f2b1cea469de8d01d6b21f96a182c12ff4e6bf69be6c9e73dcbc7e7dc12f97ed",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\ukiyoe\\derived_contract.json"
+  },
+  {
+    "path": "profiles/source/ukiyoe/derived_weights.npz",
+    "sha256": "393f459c215814cb8cf35da0ad65de8faaee608c6905ea79421201f2b742ad04",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\ukiyoe\\derived_weights.npz"
+  },
+  {
+    "path": "profiles/source/inkwash/derived_contract.json",
+    "sha256": "074073bc85fe3776fe980eef01d1b436590e2fd31c2a5a17d991fc76bde39b3b",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\inkwash\\derived_contract.json"
+  },
+  {
+    "path": "profiles/source/inkwash/derived_weights.npz",
+    "sha256": "ea1af322af0a363da62871352bf9ce4286e57e8e68bbf8e241dbd7ca4e18b524",
+    "source": "E:\\Ti60F225\\fast_style_fpga\\sim\\investigation_2026_10_06\\multistyle_43eab67\\inkwash\\derived_weights.npz"
+  }
+]

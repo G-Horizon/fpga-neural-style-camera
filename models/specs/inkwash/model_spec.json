@@ -1,0 +1,754 @@
+{
+  "name": "student_d64_inkwash_affine",
+  "arch_string": "c3s1-8 d16 d32 B32>16>32 x5 u16 u8 c3s1-3",
+  "input": {
+    "layout": "NCHW",
+    "channels": 3,
+    "range": [
+      0,
+      255
+    ],
+    "dtype": "uint8 -> float32",
+    "canonical_resolution": [
+      256,
+      256
+    ]
+  },
+  "output": {
+    "channels": 3,
+    "range": [
+      0,
+      255
+    ],
+    "activation": "none"
+  },
+  "trunk_scale": 4,
+  "normalization": "affine",
+  "upsample_method": "transpose",
+  "residual_add_activation": "none",
+  "layers": [
+    {
+      "name": "head",
+      "type": "conv2d",
+      "cin": 3,
+      "cout": 8,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "downs.0",
+      "type": "conv2d",
+      "cin": 8,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "downs.1",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.0",
+      "type": "residual_block",
+      "bottleneck": true,
+      "skip": true
+    },
+    {
+      "name": "trunk.0.conv1",
+      "type": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.0.conv2",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.0.conv3",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.1",
+      "type": "residual_block",
+      "bottleneck": true,
+      "skip": true
+    },
+    {
+      "name": "trunk.1.conv1",
+      "type": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.1.conv2",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.1.conv3",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.2",
+      "type": "residual_block",
+      "bottleneck": true,
+      "skip": true
+    },
+    {
+      "name": "trunk.2.conv1",
+      "type": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.2.conv2",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.2.conv3",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.3",
+      "type": "residual_block",
+      "bottleneck": true,
+      "skip": true
+    },
+    {
+      "name": "trunk.3.conv1",
+      "type": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.3.conv2",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.3.conv3",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.4",
+      "type": "residual_block",
+      "bottleneck": true,
+      "skip": true
+    },
+    {
+      "name": "trunk.4.conv1",
+      "type": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.4.conv2",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "trunk.4.conv3",
+      "type": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          0,
+          0
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      }
+    },
+    {
+      "name": "ups.0.conv",
+      "type": "conv_transpose2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "output_padding": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      },
+      "upsample_method": "transpose"
+    },
+    {
+      "name": "ups.1.conv",
+      "type": "conv_transpose2d",
+      "cin": 16,
+      "cout": 8,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "output_padding": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "relu",
+      "normalization": {
+        "type": "affine",
+        "foldable": true,
+        "form": "y = a*x + b"
+      },
+      "upsample_method": "transpose"
+    },
+    {
+      "name": "tail",
+      "type": "conv2d",
+      "cin": 8,
+      "cout": 3,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": {
+        "mode": "reflect",
+        "amount": [
+          1,
+          1
+        ]
+      },
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true,
+      "activation": "none",
+      "normalization": {
+        "type": "none",
+        "foldable": true
+      }
+    }
+  ],
+  "training_only_modules_removed": [
+    "feature adapters (1x1 convs)",
+    "VGG16 loss network",
+    "Haar DWT loss"
+  ]
+}

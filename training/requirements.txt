@@ -1,0 +1,7 @@
+torch
+torchvision
+numpy
+Pillow
+PyYAML
+scikit-image
+# Optional perceptual evaluation: lpips

@@ -1,0 +1,64 @@
+
+experiment:
+  name: base
+  stage: 0
+  seed: 1234
+  output_root: runs
+
+data:
+  root: data/coco_val2017
+  train_list: data/splits/train.txt
+  val_list: data/splits/val_fixed.txt
+  cache_dir: data/cache
+  crop: 256
+  views_per_image: 2
+  view_scales: [1.0, 1.15, 1.35]
+  val_crop: 256
+  num_workers: 2
+  augment_d4: true
+
+teacher:
+  checkpoint: ../models/teachers/vangogh_teacher.pth
+
+loss:
+  output:
+    kind: charbonnier          # charbonnier | l1
+    weight: 1.0
+    eps: 0.001
+  perceptual:
+    weight: 0.5
+    layers: [relu1_2, relu2_2, relu3_3]
+    weights: [1.0, 1.0, 1.0]
+  style:
+    weight: 2.0
+    layers: [relu1_2, relu2_2, relu3_3]
+    weights: [1.0, 1.0, 1.0]
+    normalize: relative
+  feature:
+    weight: 2.0
+    taps: [down1, trunk_in, trunk_mid, trunk_out, pre_tail]
+    tap_weights: [1.0, 1.0, 1.0, 1.0, 1.0]
+    mode: cosine
+  hf:
+    weight: 0.1
+    levels: 1
+  tv:
+    weight: 0.0
+
+optim:
+  batch_size: 8
+  lr: 1.0e-3
+  lr_schedule: cosine         # cosine | step | none
+  warmup_steps: 300
+  epochs: 24
+  steps_per_epoch: 500
+  weight_decay: 0.0
+  grad_clip: 1.0
+  amp: false
+  log_every: 50
+
+eval:
+  every_epochs: 2
+  batch_size: 4
+  export_images: true
+  contact_sheet: true

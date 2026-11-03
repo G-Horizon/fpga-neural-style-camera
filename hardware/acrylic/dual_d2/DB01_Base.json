@@ -1,0 +1,125 @@
+{
+  "name": "DB01_Base",
+  "units": "mm",
+  "thickness_mm": 2.7,
+  "holes": [
+    [
+      5,
+      5,
+      2.4
+    ],
+    [
+      5,
+      95,
+      2.4
+    ],
+    [
+      115,
+      95,
+      2.4
+    ],
+    [
+      115,
+      15,
+      2.4
+    ]
+  ],
+  "rounded_rectangle_cuts": [],
+  "outline_vertices_xyb_mm": [],
+  "external_size_mm": [
+    120,
+    100
+  ],
+  "corner_radius_mm": 4,
+  "R2_revision_reason": "Base-to-middle layer uses shortFF8 pillars. Camera is no longer in this lower stage, so remove its former base-plate tongue slot.",
+  "adhesive_feet": {
+    "diameter_mm": 10,
+    "height_mm": 5,
+    "centers_mm": [
+      [
+        12,
+        12
+      ],
+      [
+        12,
+        88
+      ],
+      [
+        108,
+        88
+      ],
+      [
+        108,
+        22
+      ]
+    ],
+    "drill_holes": false
+  },
+  "geometry_validation": {
+    "valid": true,
+    "solid_count": 1,
+    "bounds_mm": [
+      -8.881784197001e-16,
+      -1.33226762955e-15,
+      0.0,
+      120.0,
+      100.0,
+      2.7
+    ],
+    "volume_mm3": 32314.058753686528,
+    "step_volume_error_mm3": 3.637978807091713e-12
+  },
+  "dxf_geometry": {
+    "closed_outer_contours": 1,
+    "circular_holes": 4,
+    "closed_inner_profiles": 0,
+    "audit_errors": 0,
+    "audit_fixes": 0,
+    "outer_points_xyb_mm": [
+      [
+        116.0,
+        -1.33226762955e-15,
+        0.0
+      ],
+      [
+        4.0,
+        0.0,
+        -0.41421356237309503
+      ],
+      [
+        0.0,
+        4.0,
+        0.0
+      ],
+      [
+        -8.881784197001e-16,
+        96.0,
+        -0.41421356237309503
+      ],
+      [
+        4.0,
+        100.0,
+        0.0
+      ],
+      [
+        116.0,
+        100.0,
+        -0.41421356237309503
+      ],
+      [
+        120.0,
+        96.0,
+        0.0
+      ],
+      [
+        120.0,
+        4.0,
+        -0.41421356237309503
+      ]
+    ],
+    "inner_points_xyb_mm": []
+  },
+  "source_part": "03R2_base_plate",
+  "quantity": 1,
+  "optional": false
+}

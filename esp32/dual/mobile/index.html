@@ -1,0 +1,4 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#11151b"><title>风格相机</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/style.css"></head><body>
+<main><canvas id="view" width="1920" height="1080" aria-label="实时风格画面"></canvas><div id="notice">正在连接相机…</div></main>
+<nav><span id="status" role="status">连接中</span><span id="style">—</span><label>画质 <select id="quality"><option value="hd">高清一致档</option><option value="low">流畅预览</option></select></label><label><input id="fpsToggle" type="checkbox">FPS</label><span id="fps" hidden>0 fps</span><button id="connect">重新连接</button><button id="fullscreen">全屏</button></nav>
+<aside id="portrait">横屏观看效果更好</aside><script type="module" src="/app.mjs"></script></body></html>

@@ -1,0 +1,376 @@
+{
+  "checkpoint_sha256": "0d4ef190862795eab04f7b9e69f237ebb0049abd585012174a2b04a7205222ee",
+  "checkpoint_bytes": 135029,
+  "checkpoint_keys": [
+    "model",
+    "spec"
+  ],
+  "spec": {
+    "name": "student_d64_inkwash_affine",
+    "head_kernel": 3,
+    "head_channels": 8,
+    "downs": [
+      16,
+      32
+    ],
+    "trunk_kind": "bottleneck",
+    "trunk_channels": 32,
+    "trunk_blocks": 5,
+    "trunk_kernel": 3,
+    "bottleneck_ratio": 0.5,
+    "ups": [
+      16,
+      8
+    ],
+    "tail_kernel": 3,
+    "norm": "none",
+    "upsample": "transpose",
+    "fixed_momentum": 0.05,
+    "bottleneck_inner": 16,
+    "arch_string": "c3s1-8 d16 d32 B32>16>32 x5 u16 u8 c3s1-3",
+    "trunk_scale": 4
+  },
+  "state_origin": "model/spec exported folded form",
+  "state_tensor_count": 42,
+  "norm_tensor_keys": [],
+  "same_architecture_and_tensor_schema_as_candy": true,
+  "structure": {
+    "spec": {
+      "head_kernel": 3,
+      "head_channels": 8,
+      "downs": [
+        16,
+        32
+      ],
+      "trunk_kind": "bottleneck",
+      "trunk_channels": 32,
+      "trunk_blocks": 5,
+      "trunk_kernel": 3,
+      "bottleneck_ratio": 0.5,
+      "ups": [
+        16,
+        8
+      ],
+      "tail_kernel": 3,
+      "upsample": "transpose",
+      "fixed_momentum": 0.05
+    },
+    "tensors": {
+      "head.conv2d.weight": {
+        "shape": [
+          8,
+          3,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "head.conv2d.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32"
+      },
+      "downs.0.conv2d.weight": {
+        "shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "downs.0.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "downs.1.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "downs.1.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv1.conv2d.weight": {
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv1.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv2.conv2d.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv2.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv3.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.0.conv3.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv1.conv2d.weight": {
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv1.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv2.conv2d.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv2.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv3.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.1.conv3.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv1.conv2d.weight": {
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv1.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv2.conv2d.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv2.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv3.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.2.conv3.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv1.conv2d.weight": {
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv1.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv2.conv2d.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv2.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv3.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.3.conv3.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv1.conv2d.weight": {
+        "shape": [
+          16,
+          32,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv1.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv2.conv2d.weight": {
+        "shape": [
+          16,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv2.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv3.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          1,
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "trunk.4.conv3.conv2d.bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "torch.float32"
+      },
+      "ups.0.conv.conv2d.weight": {
+        "shape": [
+          32,
+          16,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "ups.0.conv.conv2d.bias": {
+        "shape": [
+          16
+        ],
+        "dtype": "torch.float32"
+      },
+      "ups.1.conv.conv2d.weight": {
+        "shape": [
+          16,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "ups.1.conv.conv2d.bias": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32"
+      },
+      "tail.conv2d.weight": {
+        "shape": [
+          3,
+          8,
+          3,
+          3
+        ],
+        "dtype": "torch.float32"
+      },
+      "tail.conv2d.bias": {
+        "shape": [
+          3
+        ],
+        "dtype": "torch.float32"
+      }
+    }
+  }
+}

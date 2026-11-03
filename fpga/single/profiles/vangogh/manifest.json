@@ -1,0 +1,743 @@
+{
+  "style": "vangogh",
+  "style_id": 1,
+  "ddr_base": "0x710000",
+  "abi": 3,
+  "trunk_zero": 497,
+  "bytes": 34864,
+  "beats": 2179,
+  "payload_crc32": "20f0cd7e",
+  "source_contract_sha256": "0fd96bb15bd91ab9b0f49b550f39c961ea0ba66efe014b48007f06139915ada1",
+  "source_weights_sha256": "5d2c0f7561e4e9f47d3ae3ce98ee5ee463c9f3f03a65ad741d5cbd08da6c32da",
+  "metadata": {
+    "checkpoint_sha256": "cbb73b7aeae04500122e87b01803f312aaa632ee6f011c200677df22f8a42fd9",
+    "checkpoint_bytes": 135029,
+    "checkpoint_keys": [
+      "model",
+      "spec"
+    ],
+    "spec": {
+      "name": "student_d64_vangogh_affine",
+      "head_kernel": 3,
+      "head_channels": 8,
+      "downs": [
+        16,
+        32
+      ],
+      "trunk_kind": "bottleneck",
+      "trunk_channels": 32,
+      "trunk_blocks": 5,
+      "trunk_kernel": 3,
+      "bottleneck_ratio": 0.5,
+      "ups": [
+        16,
+        8
+      ],
+      "tail_kernel": 3,
+      "norm": "none",
+      "upsample": "transpose",
+      "fixed_momentum": 0.05,
+      "bottleneck_inner": 16,
+      "arch_string": "c3s1-8 d16 d32 B32>16>32 x5 u16 u8 c3s1-3",
+      "trunk_scale": 4
+    },
+    "state_origin": "model/spec exported folded form",
+    "state_tensor_count": 42,
+    "norm_tensor_keys": [],
+    "same_architecture_and_tensor_schema_as_candy": true,
+    "structure": {
+      "spec": {
+        "head_kernel": 3,
+        "head_channels": 8,
+        "downs": [
+          16,
+          32
+        ],
+        "trunk_kind": "bottleneck",
+        "trunk_channels": 32,
+        "trunk_blocks": 5,
+        "trunk_kernel": 3,
+        "bottleneck_ratio": 0.5,
+        "ups": [
+          16,
+          8
+        ],
+        "tail_kernel": 3,
+        "upsample": "transpose",
+        "fixed_momentum": 0.05
+      },
+      "tensors": {
+        "head.conv2d.weight": {
+          "shape": [
+            8,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "head.conv2d.bias": {
+          "shape": [
+            8
+          ],
+          "dtype": "torch.float32"
+        },
+        "downs.0.conv2d.weight": {
+          "shape": [
+            16,
+            8,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "downs.0.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "downs.1.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "downs.1.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv1.conv2d.weight": {
+          "shape": [
+            16,
+            32,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv1.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv2.conv2d.weight": {
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv2.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv3.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.0.conv3.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv1.conv2d.weight": {
+          "shape": [
+            16,
+            32,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv1.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv2.conv2d.weight": {
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv2.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv3.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.1.conv3.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv1.conv2d.weight": {
+          "shape": [
+            16,
+            32,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv1.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv2.conv2d.weight": {
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv2.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv3.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.2.conv3.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv1.conv2d.weight": {
+          "shape": [
+            16,
+            32,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv1.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv2.conv2d.weight": {
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv2.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv3.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.3.conv3.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv1.conv2d.weight": {
+          "shape": [
+            16,
+            32,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv1.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv2.conv2d.weight": {
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv2.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv3.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            1,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "trunk.4.conv3.conv2d.bias": {
+          "shape": [
+            32
+          ],
+          "dtype": "torch.float32"
+        },
+        "ups.0.conv.conv2d.weight": {
+          "shape": [
+            32,
+            16,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "ups.0.conv.conv2d.bias": {
+          "shape": [
+            16
+          ],
+          "dtype": "torch.float32"
+        },
+        "ups.1.conv.conv2d.weight": {
+          "shape": [
+            16,
+            8,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "ups.1.conv.conv2d.bias": {
+          "shape": [
+            8
+          ],
+          "dtype": "torch.float32"
+        },
+        "tail.conv2d.weight": {
+          "shape": [
+            3,
+            8,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "tail.conv2d.bias": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      }
+    }
+  },
+  "outputs": {
+    "profile.bin": "59bf7245af1ddb5fb4ac25f784469e4d3465f3bac763c14fdb654fed54edaf14",
+    "profile.mem": "46ad9d9331c7ed548ef191c78db6e4272a5562a8c19f584077d5bf9233b72e8a",
+    "weights.mem": "64d4afeae82481f4fec6a2a765a6b43a8f8995e0f5c9ae75ad3e767767ef7467",
+    "config.mem": "a5f8d08cbaa624f01b3e4a18bd581180d0b5563062c4c368f18b7f216df12538"
+  },
+  "accumulator_prefix_bounds": [
+    {
+      "layer": "head",
+      "phase": "all",
+      "min": -209292,
+      "max": 317137
+    },
+    {
+      "layer": "downs.0",
+      "phase": "all",
+      "min": -556388,
+      "max": 553319
+    },
+    {
+      "layer": "downs.1",
+      "phase": "all",
+      "min": -650462,
+      "max": 922679
+    },
+    {
+      "layer": "trunk.0.conv1",
+      "phase": "all",
+      "min": -981718,
+      "max": 988580
+    },
+    {
+      "layer": "trunk.0.conv2",
+      "phase": "all",
+      "min": -1401660,
+      "max": 955355
+    },
+    {
+      "layer": "trunk.0.conv3",
+      "phase": "all",
+      "min": -215288,
+      "max": 196444
+    },
+    {
+      "layer": "trunk.1.conv1",
+      "phase": "all",
+      "min": -1023161,
+      "max": 1021816
+    },
+    {
+      "layer": "trunk.1.conv2",
+      "phase": "all",
+      "min": -1277210,
+      "max": 795934
+    },
+    {
+      "layer": "trunk.1.conv3",
+      "phase": "all",
+      "min": -201310,
+      "max": 191455
+    },
+    {
+      "layer": "trunk.2.conv1",
+      "phase": "all",
+      "min": -945127,
+      "max": 935147
+    },
+    {
+      "layer": "trunk.2.conv2",
+      "phase": "all",
+      "min": -764278,
+      "max": 805559
+    },
+    {
+      "layer": "trunk.2.conv3",
+      "phase": "all",
+      "min": -182067,
+      "max": 232487
+    },
+    {
+      "layer": "trunk.3.conv1",
+      "phase": "all",
+      "min": -1062185,
+      "max": 1058494
+    },
+    {
+      "layer": "trunk.3.conv2",
+      "phase": "all",
+      "min": -1455305,
+      "max": 950493
+    },
+    {
+      "layer": "trunk.3.conv3",
+      "phase": "all",
+      "min": -222147,
+      "max": 183818
+    },
+    {
+      "layer": "trunk.4.conv1",
+      "phase": "all",
+      "min": -1081250,
+      "max": 1093648
+    },
+    {
+      "layer": "trunk.4.conv2",
+      "phase": "all",
+      "min": -736344,
+      "max": 824031
+    },
+    {
+      "layer": "trunk.4.conv3",
+      "phase": "all",
+      "min": -166994,
+      "max": 209178
+    },
+    {
+      "layer": "ups.0",
+      "phase": "EE",
+      "min": -790060,
+      "max": 800705
+    },
+    {
+      "layer": "ups.0",
+      "phase": "EO",
+      "min": -1221433,
+      "max": 1228652
+    },
+    {
+      "layer": "ups.0",
+      "phase": "OE",
+      "min": -1289041,
+      "max": 1289942
+    },
+    {
+      "layer": "ups.0",
+      "phase": "OO",
+      "min": -2131218,
+      "max": 2159244
+    },
+    {
+      "layer": "ups.1",
+      "phase": "EE",
+      "min": -79828,
+      "max": 123049
+    },
+    {
+      "layer": "ups.1",
+      "phase": "EO",
+      "min": -155156,
+      "max": 245549
+    },
+    {
+      "layer": "ups.1",
+      "phase": "OE",
+      "min": -140137,
+      "max": 227599
+    },
+    {
+      "layer": "ups.1",
+      "phase": "OO",
+      "min": -302443,
+      "max": 382484
+    },
+    {
+      "layer": "tail",
+      "phase": "all",
+      "min": -193153,
+      "max": 721022
+    }
+  ],
+  "cfg_bias_storage_domain": {
+    "trunk_signed_bits": 20,
+    "decoder_signed_bits": 13,
+    "sign_extension_roundtrip": "PASS"
+  },
+  "hardware_status": "NOT_VERIFIED",
+  "integer_weight_roundtrip": "PASS",
+  "compute_lanes": 128,
+  "weight_tiles": 494,
+  "weight_bits": 512,
+  "weight_address_bits": 9,
+  "logical_weight_tiles": 247,
+  "logical_weight_bits": 1024,
+  "logical_weight_address_bits": 8,
+  "physical_layout": "native128 little-endian low512 then high512 per logical tile",
+  "logical_layers": [
+    {
+      "name": "head",
+      "weight_base": 0,
+      "weight_tiles": 9,
+      "config_base": 0,
+      "config_entries": 8,
+      "input_major": false
+    },
+    {
+      "name": "downs.0",
+      "weight_base": 9,
+      "weight_tiles": 9,
+      "config_base": 8,
+      "config_entries": 16,
+      "input_major": false
+    },
+    {
+      "name": "downs.1",
+      "weight_base": 18,
+      "weight_tiles": 36,
+      "config_base": 24,
+      "config_entries": 32,
+      "input_major": false
+    },
+    {
+      "name": "trunk.0.conv1",
+      "weight_base": 54,
+      "weight_tiles": 4,
+      "config_base": 56,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.0.conv2",
+      "weight_base": 58,
+      "weight_tiles": 18,
+      "config_base": 72,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.0.conv3",
+      "weight_base": 76,
+      "weight_tiles": 4,
+      "config_base": 88,
+      "config_entries": 32,
+      "input_major": true
+    },
+    {
+      "name": "trunk.1.conv1",
+      "weight_base": 80,
+      "weight_tiles": 4,
+      "config_base": 120,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.1.conv2",
+      "weight_base": 84,
+      "weight_tiles": 18,
+      "config_base": 136,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.1.conv3",
+      "weight_base": 102,
+      "weight_tiles": 4,
+      "config_base": 152,
+      "config_entries": 32,
+      "input_major": true
+    },
+    {
+      "name": "trunk.2.conv1",
+      "weight_base": 106,
+      "weight_tiles": 4,
+      "config_base": 184,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.2.conv2",
+      "weight_base": 110,
+      "weight_tiles": 18,
+      "config_base": 200,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.2.conv3",
+      "weight_base": 128,
+      "weight_tiles": 4,
+      "config_base": 216,
+      "config_entries": 32,
+      "input_major": true
+    },
+    {
+      "name": "trunk.3.conv1",
+      "weight_base": 132,
+      "weight_tiles": 4,
+      "config_base": 248,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.3.conv2",
+      "weight_base": 136,
+      "weight_tiles": 18,
+      "config_base": 264,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.3.conv3",
+      "weight_base": 154,
+      "weight_tiles": 4,
+      "config_base": 280,
+      "config_entries": 32,
+      "input_major": true
+    },
+    {
+      "name": "trunk.4.conv1",
+      "weight_base": 158,
+      "weight_tiles": 4,
+      "config_base": 312,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.4.conv2",
+      "weight_base": 162,
+      "weight_tiles": 18,
+      "config_base": 328,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "trunk.4.conv3",
+      "weight_base": 180,
+      "weight_tiles": 4,
+      "config_base": 344,
+      "config_entries": 32,
+      "input_major": true
+    },
+    {
+      "name": "ups.0",
+      "weight_base": 184,
+      "weight_tiles": 36,
+      "config_base": 376,
+      "config_entries": 16,
+      "input_major": true
+    },
+    {
+      "name": "ups.1",
+      "weight_base": 220,
+      "weight_tiles": 18,
+      "config_base": 392,
+      "config_entries": 8,
+      "input_major": true
+    },
+    {
+      "name": "tail",
+      "weight_base": 238,
+      "weight_tiles": 9,
+      "config_base": 400,
+      "config_entries": 3,
+      "input_major": true
+    }
+  ]
+}

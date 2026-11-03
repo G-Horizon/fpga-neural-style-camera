@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "name": "Current room temporary colour",
+  "temporary": true,
+  "description": "User authorized current-room compensation; replace after a white or gray reference becomes available.",
+  "parameters": {
+    "CAM_CFA": 0,
+    "CAM_WB_R_Q8": 519,
+    "CAM_WB_G_Q8": 256,
+    "CAM_WB_B_Q8": 427,
+    "CAM_GAMMA_EN": 1
+  },
+  "gain_format": "unsigned Q8, 256 equals 1.0; round then saturate to 255",
+  "gamma": "integer8 lookup of round(255*(x/255)^(1/2.2))",
+  "calibration_basis": "User-authorized gray-world estimate from current room; actual acceptedISP lane0 RGB unsigned interval sums, not neutral-white calibration",
+  "phase_status": "Preserves existing trial CFA; final Bayer phase still requires a colour reference.",
+  "board_acceptance": "pending",
+  "source_capture": {
+    "path": "evidence/board/20261009_194201.uart.json",
+    "sha256": "e4d4961062aa9500da3a8f60782c8a8b588c36be504475e283525bcfa5a96784",
+    "sequence_first": 118,
+    "sequence_last": 146,
+    "seconds": 7.60294752,
+    "delta_sums": {
+      "r": 7197343,
+      "g": 14577525,
+      "b": 8748392
+    },
+    "relative_gain_r": 2.025403680219214,
+    "relative_gain_b": 1.6663090771424052
+  }
+}

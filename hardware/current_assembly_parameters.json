@@ -1,0 +1,53 @@
+{
+  "units": "mm",
+  "plate_design_thickness": 2.7,
+  "material": "clear colourless acrylic",
+  "fpga_pcb": "black with white silkscreen; J6/J8 bare unpopulated through-holes",
+  "feet": {
+    "shape": "rounded rectangle",
+    "length": 25,
+    "width": 10,
+    "height": 2,
+    "quantity": 4,
+    "center_xyz": [
+      [
+        12,
+        18,
+        -2
+      ],
+      [
+        12,
+        82,
+        -2
+      ],
+      [
+        107,
+        82,
+        -2
+      ],
+      [
+        107,
+        18,
+        -2
+      ]
+    ]
+  },
+  "dual_d4": {
+    "board_to_board_pillar_body_length": 30,
+    "quantity": 4,
+    "top_external_layer_pillar_body_length": 50,
+    "top_quantity": 4,
+    "lower_upper_pcb_bottom_z": [
+      23.4,
+      57.1
+    ],
+    "upper_carrier_bottom_z": 45.4,
+    "model_ethernet_top_z": 38.3,
+    "model_clearance": 7.1,
+    "upper_external_acrylic_bottom_z": 99.1,
+    "s3_mic_pcb_bottom_z": 101.8,
+    "link": "Ethernet RJ45 direct; display from upper A HDMI TX"
+  },
+  "status": "CAD/reference dimensions; no new physical cutting or remeasurement in this staging task",
+  "historical_dxf_note": "R2/D2 JSON still contains old round feet and 50mm inter-board metadata; use DXF for planar design, not final stack/foot specification"
+}

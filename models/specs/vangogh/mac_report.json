@@ -1,0 +1,557 @@
+{
+  "model": "student_d64_vangogh_affine",
+  "convention": "fpga",
+  "mac_convention_note": "Conv2d: Cin*Cout*kh*kw*Ho*Wo. ConvTranspose2d: Cin*Cout*kh*kw*Hi*Wi (non-zero MACs only). UpsampleConv is credited as the equivalent stride-2 transposed convolution under convention='fpga'.",
+  "input_resolution": [
+    256,
+    256
+  ],
+  "mac_per_frame": 171966464,
+  "gmac_per_frame": 0.171966464,
+  "conv_weight_params": 28592,
+  "conv_bias_params": 403,
+  "conv_params_total": 28995,
+  "mac_by_output_resolution": {
+    "64x64": 87031808,
+    "256x256": 47185920,
+    "128x128": 37748736
+  },
+  "mac_by_kind": {
+    "conv2d": 134217728,
+    "conv_transpose2d": 37748736
+  },
+  "ops": [
+    {
+      "name": "head.conv2d",
+      "kind": "conv2d",
+      "cin": 3,
+      "cout": 8,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        258,
+        258
+      ],
+      "out_hw": [
+        256,
+        256
+      ],
+      "mac": 14155776,
+      "weight_params": 216,
+      "bias_params": 8
+    },
+    {
+      "name": "downs.0.conv2d",
+      "kind": "conv2d",
+      "cin": 8,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "in_hw": [
+        258,
+        258
+      ],
+      "out_hw": [
+        128,
+        128
+      ],
+      "mac": 18874368,
+      "weight_params": 1152,
+      "bias_params": 16
+    },
+    {
+      "name": "downs.1.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "in_hw": [
+        130,
+        130
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 18874368,
+      "weight_params": 4608,
+      "bias_params": 32
+    },
+    {
+      "name": "trunk.0.conv1.conv2d",
+      "kind": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.0.conv2.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        66,
+        66
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 9437184,
+      "weight_params": 2304,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.0.conv3.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 32
+    },
+    {
+      "name": "trunk.1.conv1.conv2d",
+      "kind": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.1.conv2.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        66,
+        66
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 9437184,
+      "weight_params": 2304,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.1.conv3.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 32
+    },
+    {
+      "name": "trunk.2.conv1.conv2d",
+      "kind": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.2.conv2.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        66,
+        66
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 9437184,
+      "weight_params": 2304,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.2.conv3.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 32
+    },
+    {
+      "name": "trunk.3.conv1.conv2d",
+      "kind": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.3.conv2.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        66,
+        66
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 9437184,
+      "weight_params": 2304,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.3.conv3.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 32
+    },
+    {
+      "name": "trunk.4.conv1.conv2d",
+      "kind": "conv2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.4.conv2.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        66,
+        66
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 9437184,
+      "weight_params": 2304,
+      "bias_params": 16
+    },
+    {
+      "name": "trunk.4.conv3.conv2d",
+      "kind": "conv2d",
+      "cin": 16,
+      "cout": 32,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        64,
+        64
+      ],
+      "mac": 2097152,
+      "weight_params": 512,
+      "bias_params": 32
+    },
+    {
+      "name": "ups.0.conv.conv2d",
+      "kind": "conv_transpose2d",
+      "cin": 32,
+      "cout": 16,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "in_hw": [
+        64,
+        64
+      ],
+      "out_hw": [
+        128,
+        128
+      ],
+      "mac": 18874368,
+      "weight_params": 4608,
+      "bias_params": 16
+    },
+    {
+      "name": "ups.1.conv.conv2d",
+      "kind": "conv_transpose2d",
+      "cin": 16,
+      "cout": 8,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "in_hw": [
+        128,
+        128
+      ],
+      "out_hw": [
+        256,
+        256
+      ],
+      "mac": 18874368,
+      "weight_params": 1152,
+      "bias_params": 8
+    },
+    {
+      "name": "tail.conv2d",
+      "kind": "conv2d",
+      "cin": 8,
+      "cout": 3,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "in_hw": [
+        258,
+        258
+      ],
+      "out_hw": [
+        256,
+        256
+      ],
+      "mac": 14155776,
+      "weight_params": 216,
+      "bias_params": 3
+    }
+  ],
+  "parameter_breakdown": {
+    "conv_weight": 28592,
+    "conv_bias": 403,
+    "norm_and_other": 0,
+    "total": 28995
+  },
+  "graph": "folded (normalisation removed)"
+}

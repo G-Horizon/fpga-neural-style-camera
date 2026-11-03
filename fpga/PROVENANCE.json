@@ -1,0 +1,26 @@
+{
+  "purpose": "Source/version identity for review; no firmware binaries or device identifiers included.",
+  "single": {
+    "project": "single/board/ddr3/final_camera_style.xml",
+    "detector": "single/rtl/interaction/d64_wave_detector.v",
+    "detector_sha256": "18c67351c89e5e379df00927d935d1227d0cbf8e6cbd34fe96abcbaa7ed1ced9",
+    "matches_formal_palm_fist": true,
+    "compiled_baseline_firmware_sha256": "cc6301055e6d6e93e0652ca52dcf283ff3f275cbf4bce01b5e4c62e10dc3ba5f",
+    "baseline_status": "Original full engineering build+27 synthetic tests passed; no new board or Flash acceptance."
+  },
+  "board_a": {
+    "project": "dual/board_a/board/ddr3/d2e_board_a.xml",
+    "baseline_firmware_sha256": "f746bf54a2ab4562e5177b1512460d1ac2b6ff3f9e4b7a084660f49ff68cfc40",
+    "baseline_short_id": "f746",
+    "role": "Camera/encoder, Ethernet exchange, full-resolution detail fusion and HDMI output; rotate180 and three-stage OSD."
+  },
+  "board_b": {
+    "project": "dual/board_b/board/ddr3/d2e_board_b_full5.xml",
+    "baseline_firmware_sha256": "97b3806d1ef6481d4ea132811db44b4ac5c0b00c9ef6039fa4ea268fd71b0ffc",
+    "baseline_short_id": "97b",
+    "role": "All five residual blocks (TRUNK_FIRST_BLOCK=0, TRUNK_BLOCK_COUNT=5) and decoder."
+  },
+  "new_staged_layout_built": false,
+  "git_initialized": false,
+  "hardware_accessed": false
+}

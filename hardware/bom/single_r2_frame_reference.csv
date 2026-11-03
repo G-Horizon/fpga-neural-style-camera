@@ -1,0 +1,11 @@
+part,quantity,status_note
+M2x50 female-female pillar,4,R2 upper frame design
+M2x8 female-female through-thread pillar,8,R2 lower frame and PCB support design
+M2x12 flat full-thread stud,3,R2 shared frame joints design
+M2x6 pan screw,14,R2 frame design
+M2x5 pan screw,4,R2 PCB support design
+M2x16 pan screw,2,R2 S3 clamp design
+M2 nylon OD5 T0.5 washer,74,Historical R2 complete reference; confirm actual assembly
+M2 nut,8,Historical R2 complete reference
+Adhesive pad 25x10x2mm,4,Updated as-built long feet; confirm screw table clearance
+camera supports and screws,confirm actual,Photo-model support revision is not represented by old R2 frame counts

@@ -1,0 +1,95 @@
+{
+    "args": [
+        "-o",
+        "DDR3IPCORE",
+        "--base_path",
+        "E:\\Ti60F225\\fast_style_fpga\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "memory_controller",
+            "name": "efx_ddr3_soft_controller",
+            "version": "5.14"
+        }
+    ],
+    "conf": {
+        "data_width": "1",
+        "freq": "400",
+        "col": "10",
+        "row": "14",
+        "bank": "3",
+        "burst_length": "8",
+        "read_burst_type": "1'b0",
+        "cas_latency": "6",
+        "dll_reset": "1",
+        "precharge_pd": "1'b1",
+        "dll_enable": "1'b1",
+        "output_drive_strength": "1'b0",
+        "al": "0",
+        "qoff": "1'b1",
+        "rtt": "3",
+        "asr": "1'b0",
+        "srt": "1'b0",
+        "dynamic_odt": "0",
+        "mpr_rf": "0",
+        "mpr": "1'b0",
+        "tREFI": "7800",
+        "arbiter_init": "1",
+        "arbiter_count": "8",
+        "write_leveling": "1'b0",
+        "tdqs": "1'b0",
+        "DDR3_DATA_RATE": "1",
+        "DDR3_MODE": "2",
+        "READ_ENABLE_PIPELINE": "8",
+        "PLL_OUT_SEL": "4"
+    },
+    "output": {
+        "external_source_source": [
+            "DDR3IPCORE\\DDR3IPCORE_tmpl.sv",
+            "DDR3IPCORE\\DDR3IPCORE_define.svh",
+            "DDR3IPCORE\\DDR3IPCORE_tmpl.vhd",
+            "DDR3IPCORE\\DDR3IPCORE.sv"
+        ],
+        "external_example_example": [
+            "DDR3IPCORE\\Ti180J484_devkit\\constraint.sdc",
+            "DDR3IPCORE\\Ti180J484_devkit\\memory_checker_axi.v",
+            "DDR3IPCORE\\Ti180J484_devkit\\example_top.v",
+            "DDR3IPCORE\\Ti180J484_devkit\\DDR3IPCORE.sv",
+            "DDR3IPCORE\\Ti180J484_devkit\\DDR3IPCORE_define.svh",
+            "DDR3IPCORE\\Ti180J484_devkit\\ti180_ddr3_controller.xml",
+            "DDR3IPCORE\\Ti180J484_devkit\\ti180_ddr3_controller.peri.xml"
+        ],
+        "external_script_generator": [],
+        "external_testbench_ncsim": [
+            "DDR3IPCORE\\Testbench\\ncsim\\DDR3IPCORE.sv"
+        ],
+        "external_testbench_synopsys": [
+            "DDR3IPCORE\\Testbench\\synopsys\\DDR3IPCORE.sv"
+        ],
+        "external_testbench_aldec": [
+            "DDR3IPCORE\\Testbench\\aldec\\DDR3IPCORE.sv"
+        ],
+        "external_testbench_testbench": [
+            "DDR3IPCORE\\Testbench\\ddr3.v",
+            "DDR3IPCORE\\Testbench\\efx_ddr3_soft_controller_tb.v",
+            "DDR3IPCORE\\Testbench\\efx_iddr.v",
+            "DDR3IPCORE\\Testbench\\efx_oddr.v",
+            "DDR3IPCORE\\Testbench\\4096Mb_ddr3_parameters.vh",
+            "DDR3IPCORE\\Testbench\\efx_srl8.v",
+            "DDR3IPCORE\\Testbench\\axi_modelsim.do",
+            "DDR3IPCORE\\Testbench\\memory_checker_axi.v",
+            "DDR3IPCORE\\Testbench\\example_top.v",
+            "DDR3IPCORE\\Testbench\\ddr3_device_ID.vh",
+            "DDR3IPCORE\\Testbench\\ddr3_controller.bin",
+            "DDR3IPCORE\\Testbench\\ddr3_controller.vh",
+            "DDR3IPCORE\\Testbench\\DDR3IPCORE.sv",
+            "DDR3IPCORE\\Testbench\\DDR3IPCORE_define.svh"
+        ],
+        "external_testbench_modelsim": [
+            "DDR3IPCORE\\Testbench\\modelsim\\DDR3IPCORE.sv"
+        ]
+    },
+    "ooc_synthesis": {},
+    "sw_version": "2025.1.110.5.9",
+    "generated_date": "2026-09-28T11:47:41.024306+00:00"
+}

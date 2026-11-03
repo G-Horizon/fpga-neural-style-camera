@@ -1,0 +1,8 @@
+{
+  "probe": "4 real validation images, 256x256",
+  "max_abs_output_difference": 0.1303253173828125,
+  "output_span": 445.3858337402344,
+  "relative": 0.0002926121746809376,
+  "max_abs_difference_in_uint8_levels": 0.1303253173828125,
+  "note": "the folded graph is what the FPGA runs; only convolution, ReLU and residual adds"
+}

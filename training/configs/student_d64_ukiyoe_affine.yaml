@@ -1,0 +1,28 @@
+# Selected final three-style D64 training configuration.
+# Deep-merged on top of configs/base.yaml.
+experiment:
+  name: student_d64_ukiyoe_affine
+  stage: 4
+  seed: 1238
+  output_root: runs
+model:
+  name: student_d64_ukiyoe_affine
+  head_kernel: 3
+  head_channels: 8
+  downs:
+  - 16
+  - 32
+  trunk_kind: bottleneck
+  trunk_channels: 32
+  trunk_blocks: 5
+  trunk_kernel: 3
+  bottleneck_ratio: 0.5
+  ups:
+  - 16
+  - 8
+  tail_kernel: 3
+  norm: affine
+  upsample: transpose
+
+teacher:
+  checkpoint: ../models/teachers/ukiyoe_teacher.pth

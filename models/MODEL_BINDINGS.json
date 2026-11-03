@@ -1,0 +1,54 @@
+{
+  "styles": [
+    {
+      "style": "vangogh",
+      "teacher_file": "teachers/vangogh_teacher.pth",
+      "teacher_bytes": 6766513,
+      "teacher_sha256": "81288b1b6105ee26aabc442678e5a5e961bcd9fa7022d0a36e4cc8fc18d2f180",
+      "student_file": "weights/vangogh/model_fp32.pth",
+      "student_sha256": "cbb73b7aeae04500122e87b01803f312aaa632ee6f011c200677df22f8a42fd9",
+      "student_export_run": "student_d64_vangogh_affine/20260929-213647",
+      "config_file": "../training/configs/student_d64_vangogh_affine.yaml",
+      "teacher_setting_in_original_config": "teachers/vangogh_teacher.pth",
+      "evidence": "Teacher and student come from the same retained three-style training bundle; matching style config names this teacher and export log identifies this student run. Student hash also matches deployment checkpoint_metadata.json.",
+      "historical_teacher_hash_recorded_during_training": false,
+      "binding_limit": "The retained student/export records do not record a teacher SHA256 at training time; current-byte teacher identity is recorded here, not retroactively proven for the historical training run."
+    },
+    {
+      "style": "ukiyoe",
+      "teacher_file": "teachers/ukiyoe_teacher.pth",
+      "teacher_bytes": 6766400,
+      "teacher_sha256": "7ac3845e419dbda6511e118c142310f67848e724e49aefd2938065f23dc3214c",
+      "student_file": "weights/ukiyoe/model_fp32.pth",
+      "student_sha256": "09457fe0ffc7b53f9760eea15546ea852d32ed3e9f469896e22ae0bd272700b9",
+      "student_export_run": "student_d64_ukiyoe_affine/20260929-214405",
+      "config_file": "../training/configs/student_d64_ukiyoe_affine.yaml",
+      "teacher_setting_in_original_config": "teachers/ukiyoe_teacher.pth",
+      "evidence": "Teacher and student come from the same retained three-style training bundle; matching style config names this teacher and export log identifies this student run. Student hash also matches deployment checkpoint_metadata.json.",
+      "historical_teacher_hash_recorded_during_training": false,
+      "binding_limit": "The retained student/export records do not record a teacher SHA256 at training time; current-byte teacher identity is recorded here, not retroactively proven for the historical training run."
+    },
+    {
+      "style": "inkwash",
+      "teacher_file": "teachers/inkwash_teacher.pth",
+      "teacher_bytes": 6766513,
+      "teacher_sha256": "a8da04419af65ecdb92c786b1c8998e16c3175edce9d1c77a694569bbe08f290",
+      "student_file": "weights/inkwash/model_fp32.pth",
+      "student_sha256": "0d4ef190862795eab04f7b9e69f237ebb0049abd585012174a2b04a7205222ee",
+      "student_export_run": "student_d64_inkwash_affine/20260929-214635",
+      "config_file": "../training/configs/student_d64_inkwash_affine.yaml",
+      "teacher_setting_in_original_config": "teachers/inkwash_teacher.pth",
+      "evidence": "Teacher and student come from the same retained three-style training bundle; matching style config names this teacher and export log identifies this student run. Student hash also matches deployment checkpoint_metadata.json.",
+      "historical_teacher_hash_recorded_during_training": false,
+      "binding_limit": "The retained student/export records do not record a teacher SHA256 at training time; current-byte teacher identity is recorded here, not retroactively proven for the historical training run."
+    }
+  ],
+  "canonical_training_resolution": [
+    256,
+    256
+  ],
+  "fpga_video_network_resolution": [
+    256,
+    144
+  ]
+}

@@ -1,0 +1,41 @@
+menu "Style camera bridge"
+config STYLE_MOCK_SOURCE
+    bool "Use generated test frames (no FPGA video or audio transactions)"
+    default y
+config STYLE_STREAM_FPS
+    int "Shared capture rate (FPS)"
+    range 1 15
+    default 10
+config STYLE_PHYSICAL_FPS
+    int "Physical FPGA shared capture FPS (CMD+NOP starts conservatively at 8)"
+    range 1 15
+    default 8
+config STYLE_SPI_CLOCK_MHZ
+    int "SPI clock MHz (validate FPGA timing before increasing)"
+    range 1 40
+    default 20
+config STYLE_AP_SSID
+    string "WiFi hotspot SSID"
+    default "Ti60-Style-Camera"
+config STYLE_AP_PASSWORD
+    string "WiFi hotspot password (at least 8 characters)"
+    default "ti60style"
+config STYLE_MIC_ENABLE
+    bool "Capture 16 kHz SPH0645 microphone PCM for voice commands"
+    default y
+choice STYLE_VOICE_ENGINE
+    prompt "Personal voice template calculation"
+    depends on STYLE_MIC_ENABLE
+    default VOICE_ON_S3
+    help
+        The same integer personal-template recognizer is available on the
+        FPGA or ESP32-S3. Its four words use the supplied speaker samples.
+        The release uses ESP32-S3 after the complete FPGA voice design
+        exceeded the Ti60 capacity. FPGA calculation remains a diagnostic
+        option. This selection must match the FPGA VOICE_ENABLE parameter.
+config VOICE_ON_FPGA
+    bool "FPGA: send contiguous PCM16 over SPI"
+config VOICE_ON_S3
+    bool "ESP32-S3: recognize locally and send accepted style commands"
+endchoice
+endmenu

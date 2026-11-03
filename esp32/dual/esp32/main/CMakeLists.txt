@@ -1,0 +1,10 @@
+idf_component_register(SRCS "main.c" "a_uart_wire.c" "a_uart.c" "wire_protocol.c" "frame_pool.c" "fpga_transport.c" "microphone.c" "voice_local.c" "remote_control.c" "remote_debug.c" "remote_json.c"
+ INCLUDE_DIRS "." REQUIRES esp_wifi esp_event esp_netif nvs_flash esp_http_server esp_timer esp_driver_spi esp_driver_gpio esp_driver_i2s esp_driver_uart esp_hw_support)
+set(MOBILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../mobile")
+foreach(asset index.html style.css app.mjs protocol.mjs)
+ target_add_binary_data(${COMPONENT_LIB} "${MOBILE_DIR}/${asset}" TEXT)
+endforeach()
+set(REMOTE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../remote")
+foreach(asset remote_debug.html remote_debug.css remote_debug.mjs remote_api.mjs)
+ target_add_binary_data(${COMPONENT_LIB} "${REMOTE_DIR}/${asset}" TEXT)
+endforeach()
